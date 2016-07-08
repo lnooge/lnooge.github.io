@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://www.lnooge.com/2016/06/29/django-form-base1/index.html">
 <meta property="og:site_name" content="ShanFeng博客">
 <meta property="og:description" content="Django &amp;#x8868;&amp;#x5355;&amp;#x7B80;&amp;#x5355;&amp;#x7406;&amp;#x89E3;Django &amp;#x7684;&amp;#x8868;&amp;#x5355;&amp;#x662F;&amp;#x7528;&amp;#x6765;&amp;#x751F;&amp;#x6210;html&amp;#x8868;&amp;#x5355;&amp;#x7684;&amp;#x3002;Django &amp;#x8868;&amp;#x5355;&amp;#x7684;&amp;#x4E0D">
-<meta property="og:updated_time" content="2016-07-03T04:41:37.970Z">
+<meta property="og:updated_time" content="2016-07-03T15:22:42.036Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="django-form Django表单学习记录">
 <meta name="twitter:description" content="Django &amp;#x8868;&amp;#x5355;&amp;#x7B80;&amp;#x5355;&amp;#x7406;&amp;#x89E3;Django &amp;#x7684;&amp;#x8868;&amp;#x5355;&amp;#x662F;&amp;#x7528;&amp;#x6765;&amp;#x751F;&amp;#x6210;html&amp;#x8868;&amp;#x5355;&amp;#x7684;&amp;#x3002;Django &amp;#x8868;&amp;#x5355;&amp;#x7684;&amp;#x4E0D">
@@ -343,8 +343,15 @@
 <p>&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;Form&#x7C7B;&#xFF0C;&#x53EA;&#x5E26;&#x6709;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;your_name &#xFF0C;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x4E3A;CharField&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5B57;&#x7B26;&#x578B;&#x5B57;&#x6BB5;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5BF9;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A;label &#x7684;&#x6807;&#x7B7E;&#xFF0C;&#x53E6;&#x5916;&#x6211;&#x4EEC;&#x8FD8;&#x9650;&#x5236;&#x4E86;&#x8BE5;&#x5B57;&#x6BB5;&#x7684;&#x957F;&#x5EA6;&#xFF08;max_length=100&#xFF09;.<br>Form &#x7684;&#x5B9E;&#x4F8B;&#x6709;&#x4E00;&#x4E2A; is_valid()&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x9A8C;&#x8BC1;&#x8868;&#x5355;&#x5B57;&#x6BB5;&#x662F;&#x5426;&#x6B63;&#x786E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x4E3A;True&#xFF0C;&#x5219;&#x4EE3;&#x8868;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x90FD;&#x662F;&#x6B63;&#x786E;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x628A;&#x8868;&#x5355;&#x7684;&#x6570;&#x636E;&#x653E;&#x5165;cleaned_data &#x5C5E;&#x6027;&#x4E2D;&#x3002;<br>&#x6211;&#x4EEC;&#x7684;&#x8868;&#x5355;&#x6E32;&#x67D3;&#x540E;&#x5C06;&#x4F1A;&#x662F;&#x4E0B;&#x8FB9;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;your_name&quot;</span>&gt;</span>Your name: <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;your_name&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;your_name&quot;</span> <span class="attr">maxlength</span>=<span class="string">&quot;100&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>&#x6CE8;&#x610F;&#x8FD9;&#x4E2A;&#x8868;&#x5355;&#x5E76;&#x4E0D;&#x662F;&#x5B8C;&#x6574;&#x7684;&#x8868;&#x5355;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x201C;<form>&#x201D;&#x548C;&#x63D0;&#x4EA4;&#x6309;&#x94AE;&#xFF0C;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x624B;&#x52A8;&#x6DFB;&#x52A0;</form></p>
 <h2 id="Django-&#x8868;&#x5355;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;"><a href="#Django-&#x8868;&#x5355;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;" class="headerlink" title="Django &#x8868;&#x5355;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;"></a>Django &#x8868;&#x5355;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">forms.CharField(label=<span class="string">&quot;label name&quot;</span>, max_length=<span class="number">100</span>) <span class="comment"># &#x5B57;&#x7B26;&#x578B;&#x5B57;&#x6BB5;</span></span><br><span class="line">forms.CharField(label=<span class="string">&apos;password&apos;</span>, widget=forms.PasswordInput) <span class="comment"># &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5BC6;&#x7801;&#x5B57;&#x6BB5;&#xFF0C;&#x6709;widget&#x6307;&#x5B9A;&#x3002;</span></span><br><span class="line">forms.EmailField() <span class="comment"># email&#x5B57;&#x6BB5;</span></span><br><span class="line">forms.BooleanField(required=<span class="keyword">False</span>) <span class="comment"># &#x5E03;&#x5C14;&#x5B57;&#x6BB5;</span></span><br></pre></td></tr></table></figure>
-<h3 id="Widgets"><a href="#Widgets" class="headerlink" title="Widgets"></a>Widgets</h3><hr>
-<p>&#x6BCF;&#x4E2A;&#x8868;&#x5355;&#x5B57;&#x6BB5;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;Widget&#x7C7B;&#xFF0C;&#x5B83;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;html&#x8868;&#x5355;widget,&#x4F8B;&#x5982;<input type="text">.<br>&#x5728;&#x5927;&#x591A;&#x60C5;&#x51B5;&#x4E0B;</p>
+<h3 id="Widgets"><a href="#Widgets" class="headerlink" title="Widgets"></a>Widgets</h3><p>&#x6BCF;&#x4E2A;&#x8868;&#x5355;&#x5B57;&#x6BB5;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;Widget&#x7C7B;&#xFF0C;&#x5B83;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;html&#x8868;&#x5355;widget,&#x4F8B;&#x5982;<input type="text">.<br>&#x5728;&#x5927;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B57;&#x6BB5;&#x90FD;&#x5177;&#x6709;&#x4E00;&#x4E2A;&#x5408;&#x7406;&#x7684;&#x9ED8;&#x8BA4;Widget&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;CharField&#x5177;&#x6709;&#x4E00;&#x4E2A;TextInput Widget&#xFF0C;&#x4ED6;&#x5728;HTML&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;<input type="text">.&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;<textarea>,&#x5728;&#x5B9A;&#x4E49;&#x8868;&#x5355;&#x5B57;&#x6BB5;&#x65F6;&#x4F60;&#x5E94;&#x8BE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5408;&#x9002;&#x7684;Widget&#x3002;</textarea></p>
+<h3 id="&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x636E;"><a href="#&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x636E;" class="headerlink" title="&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x636E;"></a>&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x636E;</h3><p>&#x4E0D;&#x7BA1;&#x8868;&#x5355;&#x63D0;&#x4EA4;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x65E6;&#x901A;&#x8FC7;is_valid()&#x9A8C;&#x8BC1;&#x6210;&#x529F;&#xFF0C;&#x9A8C;&#x8BC1;&#x540E;&#x7684;&#x8868;&#x5355;&#x6570;&#x636E;&#x5C06;&#x4F4D;&#x4E8E;form.cleaned_data&#x5B57;&#x5178;&#x4E2D;&#x3002;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x4E3A;&#x4F60;&#x8F6C;&#x6362;&#x597D;&#x4E3A;Python&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x8868;&#x5355;&#x6A21;&#x677F;"><a href="#&#x4F7F;&#x7528;&#x8868;&#x5355;&#x6A21;&#x677F;" class="headerlink" title="&#x4F7F;&#x7528;&#x8868;&#x5355;&#x6A21;&#x677F;"></a>&#x4F7F;&#x7528;&#x8868;&#x5355;&#x6A21;&#x677F;</h2><p>&#x4F60;&#x9700;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x5C06;&#x8868;&#x5355;&#x5B9E;&#x4F8B;&#x653E;&#x8FDB;&#x6A21;&#x677F;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x5982;&#x679C;&#x8868;&#x5355;&#x5728;Context&#x4E2D;&#x53EB;&#x505A;form,&#x90A3;&#x4E48; &#x5C06;&#x6B63;&#x786E;&#x5730;&#x6E32;&#x67D3;&#x5B83;&#x7684;<label>&#x548C;<input>&#x5143;&#x7D20;&#x3002;</label></p>
+<h3 id="&#x8868;&#x5355;&#x6A21;&#x677F;&#x7684;&#x989D;&#x5916;&#x6807;&#x7B7E;"><a href="#&#x8868;&#x5355;&#x6A21;&#x677F;&#x7684;&#x989D;&#x5916;&#x6807;&#x7B7E;" class="headerlink" title="&#x8868;&#x5355;&#x6A21;&#x677F;&#x7684;&#x989D;&#x5916;&#x6807;&#x7B7E;"></a>&#x8868;&#x5355;&#x6A21;&#x677F;&#x7684;&#x989D;&#x5916;&#x6807;&#x7B7E;</h3><p>&#x4E0D;&#x8981;&#x5FD8;&#x8BB0;&#xFF0C;&#x8868;&#x5355;&#x7684;&#x8F93;&#x51FA;&#x4E0D;&#x5305;&#x542B;<form>&#x6807;&#x7B7E;&#xFF0C;&#x548C;&#x8868;&#x5355;&#x7684;submit&#x6309;&#x94AE;&#x3002;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x53BB;&#x5199;&#x3002;<br>&#x5BF9;&#x4E8E;<label>/<input>&#x5BF9;&#xFF0C;&#x8FD8;&#x6709;&#x51E0;&#x4E2A;&#x8F93;&#x51FA;&#x9009;&#x9879;&#xFF1A;</label></form></p>
+<ul>
+<li> &#x4EEA;&#x8868;&#x683C;&#x5F62;&#x5F0F;&#x5C06;&#x5B83;&#x4EEC;&#x6E32;&#x67D3;&#x5728;<tr>&#x6807;&#x7B7E;&#x4E2D;</tr></li>
+<li> &#x5C06;&#x4ED6;&#x4EEC;&#x6E32;&#x67D3;&#x5728;<p>&#x6807;&#x7B7E;&#x4E2D;</p></li>
+<li> &#x5C06;&#x5B83;&#x4EEC;&#x6E32;&#x67D3;&#x5728;</li><li>&#x4E2D;<br>&#x6CE8;&#x610F;&#xFF1A;&#x4F60;&#x5FC5;&#x987B;&#x81EA;&#x5DF1;&#x63D0;&#x4F9B;<table>&#x6216;<ul>&#x5143;&#x7D20;&#x3002;</ul></table></li>
+</ul>
 
       
     </div>
@@ -407,6 +414,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/04/django-form2/" rel="prev" title="用Django做的评论系统-学习笔记！">
+                用Django做的评论系统-学习笔记！ <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -497,7 +508,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -505,7 +516,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -514,7 +525,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -586,7 +597,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Django-表单简单理解"><span class="nav-number">1.</span> <span class="nav-text">Django 表单简单理解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模型和表单"><span class="nav-number">1.1.</span> <span class="nav-text">模型和表单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定和未绑定的表单实例"><span class="nav-number">1.2.</span> <span class="nav-text">绑定和未绑定的表单实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一个简单的表单"><span class="nav-number">2.</span> <span class="nav-text">一个简单的表单</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">2.1.</span> <span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建一个得到用户名的表单"><span class="nav-number">3.</span> <span class="nav-text">构建一个得到用户名的表单</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用Django-表单实现上面表单"><span class="nav-number">3.1.</span> <span class="nav-text">用Django 表单实现上面表单</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Django-表单字段类型"><span class="nav-number">4.</span> <span class="nav-text">Django 表单字段类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Widgets"><span class="nav-number">4.1.</span> <span class="nav-text">Widgets</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Django-表单简单理解"><span class="nav-number">1.</span> <span class="nav-text">Django 表单简单理解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模型和表单"><span class="nav-number">1.1.</span> <span class="nav-text">模型和表单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定和未绑定的表单实例"><span class="nav-number">1.2.</span> <span class="nav-text">绑定和未绑定的表单实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一个简单的表单"><span class="nav-number">2.</span> <span class="nav-text">一个简单的表单</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">2.1.</span> <span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建一个得到用户名的表单"><span class="nav-number">3.</span> <span class="nav-text">构建一个得到用户名的表单</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用Django-表单实现上面表单"><span class="nav-number">3.1.</span> <span class="nav-text">用Django 表单实现上面表单</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Django-表单字段类型"><span class="nav-number">4.</span> <span class="nav-text">Django 表单字段类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Widgets"><span class="nav-number">4.1.</span> <span class="nav-text">Widgets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字段的数据"><span class="nav-number">4.2.</span> <span class="nav-text">字段的数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用表单模板"><span class="nav-number">5.</span> <span class="nav-text">使用表单模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表单模板的额外标签"><span class="nav-number">5.1.</span> <span class="nav-text">表单模板的额外标签</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
