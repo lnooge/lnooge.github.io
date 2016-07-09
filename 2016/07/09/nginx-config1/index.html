@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python Django Web Ubuntu html " />
+  <meta name="keywords" content="CentOS,Nginx," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="关注 Python 与 Web，喜欢开源与Linux，本站只是用来分享我自己的一些收藏内容的。本人喜欢使用Emacs，虽然掌握的很少。">
+<meta name="description" content="&amp;#x6628;&amp;#x5929;&amp;#x4E70;&amp;#x4E86;&amp;#x7F8E;&amp;#x56FD;&amp;#x7684;vps(Bandwagon Host ),&amp;#x633A;&amp;#x4FBF;&amp;#x5B9C;&amp;#x7684;&amp;#x4E00;&amp;#x5E74;&amp;#x624D;120&amp;#x591A;&amp;#x5143;&amp;#x4EBA;&amp;#x6C11;&amp;#x5E01;&amp;#xFF0C;&amp;#x4ECA;&amp;#x5929;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nginx-config1">
+<meta property="og:title" content="CentOS7 Nginx 安装与配置">
 <meta property="og:url" content="http://www.lnooge.com/2016/07/09/nginx-config1/index.html">
 <meta property="og:site_name" content="ShanFeng博客">
-<meta property="og:description" content="关注 Python 与 Web，喜欢开源与Linux，本站只是用来分享我自己的一些收藏内容的。本人喜欢使用Emacs，虽然掌握的很少。">
-<meta property="og:updated_time" content="2016-07-09T10:53:13.386Z">
+<meta property="og:description" content="&amp;#x6628;&amp;#x5929;&amp;#x4E70;&amp;#x4E86;&amp;#x7F8E;&amp;#x56FD;&amp;#x7684;vps(Bandwagon Host ),&amp;#x633A;&amp;#x4FBF;&amp;#x5B9C;&amp;#x7684;&amp;#x4E00;&amp;#x5E74;&amp;#x624D;120&amp;#x591A;&amp;#x5143;&amp;#x4EBA;&amp;#x6C11;&amp;#x5E01;&amp;#xFF0C;&amp;#x4ECA;&amp;#x5929;">
+<meta property="og:updated_time" content="2016-07-09T12:02:27.839Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nginx-config1">
-<meta name="twitter:description" content="关注 Python 与 Web，喜欢开源与Linux，本站只是用来分享我自己的一些收藏内容的。本人喜欢使用Emacs，虽然掌握的很少。">
+<meta name="twitter:title" content="CentOS7 Nginx 安装与配置">
+<meta name="twitter:description" content="&amp;#x6628;&amp;#x5929;&amp;#x4E70;&amp;#x4E86;&amp;#x7F8E;&amp;#x56FD;&amp;#x7684;vps(Bandwagon Host ),&amp;#x633A;&amp;#x4FBF;&amp;#x5B9C;&amp;#x7684;&amp;#x4E00;&amp;#x5E74;&amp;#x624D;120&amp;#x591A;&amp;#x5143;&amp;#x4EBA;&amp;#x6C11;&amp;#x5E01;&amp;#xFF0C;&amp;#x4ECA;&amp;#x5929;">
 
 
 
@@ -116,7 +116,7 @@
 
   <link rel="canonical" href="http://www.lnooge.com/2016/07/09/nginx-config1/"/>
 
-  <title> nginx-config1 | ShanFeng博客 </title>
+  <title> CentOS7 Nginx 安装与配置 | ShanFeng博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +256,7 @@
             
             
               
-                nginx-config1
+                CentOS7 Nginx 安装与配置
               
             
           </h1>
@@ -273,6 +273,25 @@
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/CentOS/" itemprop="url" rel="index">
+                    <span itemprop="name">CentOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -303,7 +322,35 @@
       
 
       
-        
+        <p>&#x6628;&#x5929;&#x4E70;&#x4E86;&#x7F8E;&#x56FD;&#x7684;vps(Bandwagon Host ),&#x633A;&#x4FBF;&#x5B9C;&#x7684;&#x4E00;&#x5E74;&#x624D;120&#x591A;&#x5143;&#x4EBA;&#x6C11;&#x5E01;&#xFF0C;&#x4ECA;&#x5929;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#x9700;&#x8981;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x9996;&#x5148;&#x5B89;&#x88C5;Nginx&#xFF0C;&#x5B89;&#x88C5;&#x6B65;&#x9AA4;&#x8BB0;&#x5F55;&#xFF1A;</p>
+<ol>
+<li>&#x914D;&#x7F6E;&#x963F;&#x91CC;&#x4E91;&#x8F6F;&#x4EF6;&#x6E90;<br>&#x8DEF;&#x5F84;&#x5728; /etc/yum.repos.d/&#x4E0B;&#x3002;<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim CentOS-aliyun.repo</span><br><span class="line">[aliyun]</span><br><span class="line">name=CentOS-<span class="variable">$releasever</span>-aliyun</span><br><span class="line">baseurl=http://mirrors.aliyun.com/centos/<span class="variable">$releasever</span>/os/<span class="variable">$basearch</span>/</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br><span class="line">gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>&#x5217;&#x51FA;&#x53EF;&#x7528; yum repository<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum repolist enabled</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="&#x6DFB;&#x52A0;Nginx&#x5230;yum&#x6E90;"><a href="#&#x6DFB;&#x52A0;Nginx&#x5230;yum&#x6E90;" class="headerlink" title="&#x6DFB;&#x52A0;Nginx&#x5230;yum&#x6E90;"></a>&#x6DFB;&#x52A0;Nginx&#x5230;yum&#x6E90;</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.r</span></span><br></pre></td></tr></table></figure>
+<h2 id="&#x5B89;&#x88C5;nginx"><a href="#&#x5B89;&#x88C5;nginx" class="headerlink" title="&#x5B89;&#x88C5;nginx"></a>&#x5B89;&#x88C5;nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#yum -vy install nginx</span></span><br></pre></td></tr></table></figure>
+<p>-v&#x4EE3;&#x8868;&#x663E;&#x793A;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;<br>-y&#x4EE3;&#x8868;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4E2D;&#x8981;&#x9009;&#x62E9;y or n &#x65F6;&#x81EA;&#x52A8;&#x5168;&#x90E8;y</p>
+<h2 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BF4;&#x660E;"><a href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BF4;&#x660E;" class="headerlink" title="&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BF4;&#x660E;"></a>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BF4;&#x660E;</h2><ol>
+<li><p>&#x914D;&#x7F6E;&#x76EE;&#x5F55;<br>&#x7F51;&#x7AD9;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x9ED8;&#x8BA4;&#x76EE;&#x5F55;<br>/usr/share/nginx/html<br>&#x7F51;&#x7AD9;&#x9ED8;&#x8BA4;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;<br>/etc/nginx/conf.d/default.conf<br>&#x81EA;&#x5B9A;&#x4E49;Nginx&#x7AD9;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;<br>/etc/nginx/conf.d/<br>nginx&#x5168;&#x5C40;&#x914D;&#x7F6E;<br>/etc/nginx/nginx.conf</p>
+</li>
+<li><p>&#x542F;&#x52A8;&#x76EE;&#x5F55;<br>/usr/sbin/nginx<br>&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code>1. -t &#x6D4B;&#x8BD5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+2. -v &#x663E;&#x793A;&#x7248;&#x672C;(show version and exit)
+3. -V &#x663E;&#x793A;&#x7248;&#x672C;&#x548C;&#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF08;show version and configure options then exit&#xFF09;
+4. -T (test configuration, dump it and exit)
+5. -q (suppress non-error messages during configuration testing)
+6. -s signal &#x505C;&#x6B62;&#x3001;&#x9000;&#x51FA;&#x3001;&#x91CD;&#x542F;&#x3001;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;(send signal to a master process: stop, quit, reopen, reload)
+7. -p refix (set prefix path(default: /etc/nginx/))
+8. -c filename (set configuration file (default: /etc/nginx/nginx.conf))
+9. -g directives (set global directives out of configuration file)
+</code></pre></li>
+<li><p>CentOS &#x5F00;&#x673A;&#x542F;&#x52A8;Nginx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sudo systemctl enable nginx.service</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="systemctl-&#x547D;&#x4EE4;&#x7B80;&#x4ECB;"><a href="#systemctl-&#x547D;&#x4EE4;&#x7B80;&#x4ECB;" class="headerlink" title="systemctl &#x547D;&#x4EE4;&#x7B80;&#x4ECB;"></a>systemctl &#x547D;&#x4EE4;&#x7B80;&#x4ECB;</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sudo systemctl list-units [PATTERN...] (List loaded units)</span></span><br><span class="line"><span class="comment">#sudo systemctl list-sockets [PATTERN...] (List loaded sockets ordered by address)</span></span><br><span class="line"><span class="comment">#sudo systemctl list-timers [PATTERN...] (List loaded timers ordered by next elapse)</span></span><br><span class="line"><span class="comment">#sudo systemctl status name</span></span><br><span class="line"><span class="comment">#sudo systemctl start name</span></span><br><span class="line"><span class="comment">#sudo systemctl stop name</span></span><br><span class="line"><span class="comment">#sudo systemctl reload name</span></span><br><span class="line"><span class="comment">#sudo systemctl restart name</span></span><br><span class="line"><span class="comment">#sudo systemctl try-restart name</span></span><br><span class="line"><span class="comment">#sudo systemctl reload-or-restart name</span></span><br><span class="line"><span class="comment">#sudo systemctl reload-or-try-restart name</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -343,6 +390,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/CentOS/" rel="tag">#CentOS</a>
+          
+            <a href="/tags/Nginx/" rel="tag">#Nginx</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -370,7 +425,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2016/07/09/nginx-config1/"
-     data-title="nginx-config1"
+     data-title="CentOS7 Nginx 安装与配置"
      data-content=""
      data-url="http://www.lnooge.com/2016/07/09/nginx-config1/">
   <div class="ds-share-inline">
@@ -400,7 +455,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/07/09/nginx-config1/"
-           data-title="nginx-config1" data-url="http://www.lnooge.com/2016/07/09/nginx-config1/">
+           data-title="CentOS7 Nginx 安装与配置" data-url="http://www.lnooge.com/2016/07/09/nginx-config1/">
       </div>
     
   </div>
@@ -462,7 +517,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -534,7 +589,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加Nginx到yum源"><span class="nav-number">1.</span> <span class="nav-text">添加Nginx到yum源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nginx"><span class="nav-number">2.</span> <span class="nav-text">安装nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件说明"><span class="nav-number">3.</span> <span class="nav-text">配置文件说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#systemctl-命令简介"><span class="nav-number">4.</span> <span class="nav-text">systemctl 命令简介</span></a></li></ol></div>
             
           </div>
         </section>
